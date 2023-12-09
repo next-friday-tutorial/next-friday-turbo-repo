@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3 # Updated version
+        uses: actions/checkout@v3
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
       - name: Setup Node.js
-        uses: actions/setup-node@v3 # Updated version
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'pnpm' # Caching dependencies
+          cache: 'pnpm'
       - name: Install Dependencies
         run: pnpm install
       - name: Run ESLint
