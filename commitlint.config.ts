@@ -24,7 +24,6 @@ const commitlintConfig: UserConfig = {
     ],
     'subject-case': [2, 'always', 'sentence-case'],
     'header-max-length': [2, 'always', 100],
-    'type-description-format': [0],
   },
 };
 
