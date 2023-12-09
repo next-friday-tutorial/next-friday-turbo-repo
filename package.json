@@ -41,7 +41,7 @@
     "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo",
     "tsc": "turbo tsc",
     "changeset": "changeset",
-    "changeset:release": "changeset publish",
+    "changeset:publish": "changeset publish",
     "changeset:version": "changeset version"
   },
   "devDependencies": {
