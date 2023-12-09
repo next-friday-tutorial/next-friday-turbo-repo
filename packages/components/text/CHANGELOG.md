@@ -1,10 +1,6 @@
 # Changelog
 
-## 1.0.1
-
 ### Patch Changes
-
-- cc9441c: First test
 
 All notable changes to this project will be documented in this file.
 
