@@ -35,7 +35,7 @@
     "build": "tsup src --dts",
     "build:fast": "tsup src",
     "sort:workspace-package-json": "sort-package-json",
-    "typecheck": "tsc --noEmit"
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@types/react": "^18.2.42",

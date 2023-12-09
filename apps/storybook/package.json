@@ -35,7 +35,7 @@
     "build": "storybook build",
     "dev": "storybook dev -p 6006",
     "sort:workspace-package-json": "sort-package-json",
-    "typecheck": "tsc --noEmit"
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@types/react": "^18.2.42",
@@ -53,7 +53,8 @@
     "@storybook/react-vite": "^7.6.4",
     "@storybook/test": "^7.6.4",
     "prop-types": "^15.8.1",
-    "storybook": "^7.6.4"
+    "storybook": "^7.6.4",
+    "vite": "^5.0.7"
   },
   "peerDependencies": {
     "react": ">=18"

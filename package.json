@@ -39,7 +39,7 @@
     "sort-package-json": "sort-package-json && pnpm sort:workspace-package-json",
     "sort:workspace-package-json": "turbo sort:workspace-package-json",
     "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo",
-    "typecheck": "turbo typecheck",
+    "tsc": "turbo tsc",
     "changeset": "changeset",
     "changeset:release": "changeset publish",
     "changeset:version": "changeset version"
