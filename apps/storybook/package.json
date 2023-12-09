@@ -26,11 +26,6 @@
     "name": "Joe Takara",
     "email": "anuchit.boonsom@gmail.com"
   },
-  "sideEffects": false,
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "storybook build",
     "dev": "storybook dev -p 6006",

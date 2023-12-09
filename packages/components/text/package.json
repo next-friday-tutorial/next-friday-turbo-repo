@@ -1,6 +1,6 @@
 {
   "name": "@next-friday-turbo-repo/text",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "private": false,
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
@@ -27,7 +27,7 @@
     "email": "anuchit.boonsom@gmail.com"
   },
   "sideEffects": false,
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],

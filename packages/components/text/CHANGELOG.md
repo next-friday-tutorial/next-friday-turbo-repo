@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.0.6
+
+### Patch Changes
+
+- Test
+
+## 1.0.5
+
+### Patch Changes
+
+- Test Build
+
+## 1.0.4
+
+### Patch Changes
+
+- Bug fix
+
+## 1.0.3
+
+### Patch Changes
+
+- Test new
+
 ## 1.0.2
 
 ### Patch Changes
