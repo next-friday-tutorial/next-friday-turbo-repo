@@ -7,5 +7,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@inkly/storybook"]
+  "ignore": ["@next-friday-turbo-repo/storybook"]
 }

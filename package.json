@@ -1,10 +1,10 @@
 {
-  "name": "inkly",
+  "name": "next-friday-turbo-repo",
   "version": "1.0.0",
   "private": true,
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
-    "inkly",
+    "next-friday-turbo-repo",
     "react",
     "component",
     "ui",
@@ -12,13 +12,13 @@
     "system",
     "design-system"
   ],
-  "homepage": "https://github.com/next-friday/inkly",
+  "homepage": "https://github.com/next-friday/next-friday-turbo-repo",
   "bugs": {
-    "url": "https://github.com/next-friday/inkly/issues"
+    "url": "https://github.com/next-friday/next-friday-turbo-repo/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/next-friday/inkly.git"
+    "url": "https://github.com/next-friday/next-friday-turbo-repo.git"
   },
   "license": "MIT",
   "author": {
