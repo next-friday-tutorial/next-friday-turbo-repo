@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- First Test
+
 ### Patch Changes
 
 All notable changes to this project will be documented in this file.
