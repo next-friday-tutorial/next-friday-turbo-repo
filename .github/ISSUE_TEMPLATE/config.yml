@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Long Questions or Ideas?
+    url: https://github.com/next-friday/inkly/discussions
+    about: Engage in detailed discussions, ask long-form questions, and share ideas.
+  - name: Discord Community Chat
+    url: https://discord.gg/inkly
+    about: Connect with the `Inkly` community on Discord for quick questions or casual chat.
+  - name: Stay Updated (Twitter)
+    url: https://twitter.com/inkly
+    about: Follow our Twitter account to stay informed about the latest news and updates from Inkly.
