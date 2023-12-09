@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 18.x
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm install
       - name: Run ESLint
         run: pnpm run lint
 
@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: 18.x
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm install
       - name: Build
         run: pnpm run build
 
@@ -63,7 +63,7 @@ jobs:
         with:
           node-version: 18.x
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm install
       - name: Build
         run: pnpm run build
       - name: Publish to npm
