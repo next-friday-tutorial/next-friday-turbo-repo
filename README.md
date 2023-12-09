@@ -1,2 +1,3 @@
 # next-friday-turbo-repo
-This utility is currently under development for a tutorial with Next Friday, and is intended solely for internal use. At this stage, it is not suitable for public release.
+
+This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.
