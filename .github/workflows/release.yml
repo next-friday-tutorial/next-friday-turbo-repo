@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Run ESLint
-        run: pnpm run lint
+        run: pnpm run eslint
 
   build:
     needs: eslint
