@@ -1,7 +1,7 @@
 {
-  "name": "@next-friday-turbo-repo/storybook",
-  "version": "1.0.0",
-  "private": true,
+  "name": "@next-friday-turbo-repo/react",
+  "version": "1.0.7",
+  "private": false,
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
     "next-friday-turbo-repo",
@@ -10,8 +10,7 @@
     "ui",
     "design",
     "system",
-    "design-system",
-    "storybook"
+    "design-system"
   ],
   "homepage": "https://github.com/next-friday/next-friday-turbo-repo",
   "bugs": {
@@ -19,37 +18,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/next-friday/next-friday-turbo-repo.git"
+    "url": "https://github.com/next-friday/next-friday-turbo-repo.git",
+    "directory": "packages/core/react"
   },
   "license": "MIT",
   "author": {
     "name": "Joe Takara",
     "email": "anuchit.boonsom@gmail.com"
   },
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "storybook build",
-    "dev": "storybook dev -p 6006",
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast -- --watch",
     "sort-package-json:workspace": "sort-package-json",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/react": "^18.2.42",
-    "@types/react-dom": "^18.2.17",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.4",
-    "@storybook/addon-interactions": "^7.6.4",
-    "@storybook/addon-links": "^7.6.4",
-    "@storybook/addon-onboarding": "^1.0.9",
-    "@storybook/blocks": "^7.6.4",
-    "@storybook/react": "^7.6.4",
-    "@storybook/react-vite": "^7.6.4",
-    "@storybook/test": "^7.6.4",
-    "prop-types": "^15.8.1",
-    "storybook": "^7.6.4",
-    "vite": "^5.0.7"
+    "@next-friday-turbo-repo/text": "workspace:*",
+    "tsup": "^8.0.1"
   },
   "peerDependencies": {
     "react": ">=18.2.0",

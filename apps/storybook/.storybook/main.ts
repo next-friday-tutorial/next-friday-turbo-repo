@@ -17,9 +17,7 @@ interface StorybookConfig {
 }
 
 const config: StorybookConfig = {
-  stories: [
-    '../../../packages/components/**/stories/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
+  stories: ['../../../packages/components/**/stories/**/*.stories.@(ts|tsx)'],
   addons: [
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),

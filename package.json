@@ -27,6 +27,9 @@
   },
   "scripts": {
     "build": "turbo build",
+    "changeset": "changeset",
+    "changeset:publish": "changeset publish",
+    "changeset:version": "changeset version",
     "clean": "pnpm turbo:clean && pnpm clean:build && pnpm clean:node-modules && pnpm clean:lock && pnpm install --hoist",
     "clean:build": "rimraf ./apps/**/dist && rimraf ./apps/**/lib && rimraf ./apps/**/storybook-static && rimraf ./packages/**/**/dist",
     "clean:lock": "rm ./pnpm-lock.yaml",
@@ -34,15 +37,12 @@
     "dev": "turbo dev",
     "eslint": "pnpm eslint:workspace-package",
     "eslint:workspace-package": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
-    "prettier": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
-    "sort-package-json": "sort-package-json && pnpm sort:workspace-package-json",
-    "sort:workspace-package-json": "turbo sort:workspace-package-json",
-    "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo",
+    "prettier": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "sort-package-json": "sort-package-json && pnpm sort-package-json:workspace",
+    "sort-package-json:workspace": "turbo sort-package-json:workspace",
     "tsc": "turbo tsc",
-    "changeset": "changeset",
-    "changeset:publish": "changeset publish",
-    "changeset:version": "changeset version"
+    "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -62,7 +62,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-sonarjs": "^0.23.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
@@ -74,11 +74,5 @@
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
-  },
-  "pnpm": {
-    "overrides": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0"
-    }
   }
 }

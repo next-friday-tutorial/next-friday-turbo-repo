@@ -5,6 +5,8 @@
 ### Patch Changes
 
 - Test patch
+- Updated dependencies
+  - @next-friday-turbo-repo/text@1.0.7
 
 ## 1.0.6
 

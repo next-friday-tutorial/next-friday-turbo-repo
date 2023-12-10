@@ -1,6 +1,6 @@
 {
   "name": "@next-friday-turbo-repo/text",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
@@ -19,7 +19,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/next-friday/next-friday-turbo-repo.git"
+    "url": "https://github.com/next-friday/next-friday-turbo-repo.git",
+    "directory": "packages/components/text"
   },
   "license": "MIT",
   "author": {
@@ -34,7 +35,8 @@
   "scripts": {
     "build": "tsup src --dts",
     "build:fast": "tsup src",
-    "sort:workspace-package-json": "sort-package-json",
+    "dev": "pnpm build:fast -- --watch",
+    "sort-package-json:workspace": "sort-package-json",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
@@ -45,8 +47,8 @@
     "tsup": "^8.0.1"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {

@@ -13,11 +13,11 @@
     "clean": {
       "cache": false
     },
-    "typecheck": {
+    "tsc": {
       "cache": false,
-      "dependsOn": ["^typecheck"]
+      "dependsOn": ["^tsc"]
     },
-    "sort:workspace-package-json": {
+    "sort-package-json:workspace": {
       "cache": false
     }
   }
