@@ -1,7 +1,10 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  clean: true,
-  target: ['es6'],
   format: ['cjs', 'esm'],
+  target: 'es2019',
+  sourcemap: true,
+  banner: {
+    js: "'use client'",
+  },
 });
