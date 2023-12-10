@@ -1,6 +1,6 @@
 {
   "name": "@next-friday-turbo-repo/text",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
     "next-friday-turbo-repo",
@@ -28,6 +28,9 @@
   },
   "sideEffects": false,
   "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src --dts",
     "build:fast": "tsup src",
@@ -52,5 +55,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

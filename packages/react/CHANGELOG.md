@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.8
+
+### Patch Changes
+
+- TEST TEST TEST
+- Updated dependencies
+  - @next-friday-turbo-repo/text@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes
