@@ -1,4 +1,4 @@
-name: Release
+name: Release Workflow
 
 on:
   push:
@@ -8,68 +8,71 @@ on:
   workflow_dispatch:
 
 jobs:
-  eslint:
+  lint_code:
+    name: Lint Code
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup pnpm
+      - name: Setup pnpm Package Manager
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - name: Setup Node.js
+          version: '7'
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '18.x'
           cache: 'pnpm'
-      - name: Install Dependencies
+      - name: Install Project Dependencies
         run: pnpm install
-      - name: Run ESLint
+      - name: Execute ESLint
         run: pnpm run eslint
 
-  build:
-    needs: eslint
+  build_project:
+    name: Build Project
+    needs: lint_code
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup pnpm
+      - name: Setup pnpm Package Manager
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - name: Setup Node.js
+          version: '7'
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '18.x'
           cache: 'pnpm'
-      - name: Install Dependencies
+      - name: Install Project Dependencies
         run: pnpm install
-      - name: Build
+      - name: Build Application
         run: pnpm run build
 
-  release:
-    needs: [eslint, build]
+  publish_release:
+    name: Publish Release
+    needs: [lint_code, build_project]
     runs-on: ubuntu-latest
     permissions:
       contents: write
       packages: write
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup pnpm
+      - name: Setup pnpm Package Manager
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - name: Setup Node.js
+          version: '7'
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '18.x'
           cache: 'pnpm'
-      - name: Install Dependencies
+      - name: Install Project Dependencies
         run: pnpm install
-      - name: Build
+      - name: Build Application
         run: pnpm run build
-      - name: Publish to npm
+      - name: Publish to npm Registry
         uses: changesets/action@v1
         with:
           publish: pnpm changeset:publish
