@@ -5,6 +5,7 @@ on:
     branches: ['main']
   pull_request:
     branches: ['main']
+  workflow_dispatch:
 
 jobs:
   eslint:
@@ -47,7 +48,7 @@ jobs:
         run: pnpm run build
 
   release:
-    needs: build
+    needs: [eslint, build]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -69,7 +70,6 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Publish to npm
-        id: changesets
         uses: changesets/action@v1
         with:
           publish: pnpm changeset:publish
