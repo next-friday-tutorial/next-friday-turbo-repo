@@ -1,6 +1,6 @@
 {
   "name": "@next-friday-turbo-repo/react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "This utility is currently under development and is intended for internal use only. It is not suitable for public use at this stage.",
   "keywords": [
     "next-friday-turbo-repo",
@@ -34,11 +34,14 @@
     "build": "tsup src --dts",
     "build:fast": "tsup src",
     "dev": "pnpm build:fast -- --watch",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
     "sort-package-json:workspace": "sort-package-json",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@next-friday-turbo-repo/text": "workspace:*",
+    "clean-package": "^2.2.0",
     "tsup": "^8.0.1"
   },
   "peerDependencies": {

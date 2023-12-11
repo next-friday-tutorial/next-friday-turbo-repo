@@ -1,4 +1,8 @@
-dist
-node_modules
-coverage
-build
+/node_modules/
+/coverage/
+/build/
+/dist/
+**/node_modules/
+**/coverage/
+**/build/
+**/dist/
