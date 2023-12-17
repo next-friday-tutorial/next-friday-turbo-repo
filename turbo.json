@@ -15,7 +15,8 @@
       "outputs": []
     },
     "clean": {
-      "cache": false
+      "cache": false,
+      "outputs": []
     },
     "tsc": {
       "cache": false,

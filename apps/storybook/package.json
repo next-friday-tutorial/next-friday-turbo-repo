@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "storybook build",
+    "clean": "rimraf .turbo storybook-static node_modules",
     "dev": "storybook dev -p 6006",
     "sort-package-json:workspace": "sort-package-json",
     "tsc": "tsc --noEmit"
@@ -48,6 +49,7 @@
     "@storybook/react-vite": "^7.6.4",
     "@storybook/test": "^7.6.4",
     "prop-types": "^15.8.1",
+    "rimraf": "^5.0.5",
     "storybook": "^7.6.4",
     "vite": "^5.0.7"
   },

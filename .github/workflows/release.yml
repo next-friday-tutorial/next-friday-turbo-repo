@@ -28,6 +28,27 @@ jobs:
       - name: Execute ESLint
         run: pnpm run lint
 
+  test_project:
+    name: Test Project
+    needs: lint_code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Setup pnpm Package Manager
+        uses: pnpm/action-setup@v2
+        with:
+          version: '7'
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'pnpm'
+      - name: Install Project Dependencies
+        run: pnpm install
+      - name: Run Tests
+        run: pnpm run test
+
   build_project:
     name: Build Project
     needs: lint_code

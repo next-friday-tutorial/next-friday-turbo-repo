@@ -34,6 +34,7 @@
   "scripts": {
     "build": "tsup src --dts",
     "build:fast": "tsup src",
+    "clean": "rimraf .turbo dist node_modules && jest --clearCache",
     "dev": "pnpm build:fast -- --watch",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
@@ -50,7 +51,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
-    "clean-package": "^2.2.0"
+    "clean-package": "^2.2.0",
+    "rimraf": "^5.0.5"
   },
   "peerDependencies": {
     "react": ">=18",
