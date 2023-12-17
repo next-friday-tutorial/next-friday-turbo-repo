@@ -26,7 +26,7 @@ jobs:
       - name: Install Project Dependencies
         run: pnpm install
       - name: Execute ESLint
-        run: pnpm run eslint
+        run: pnpm run lint
 
   build_project:
     name: Build Project
