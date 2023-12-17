@@ -51,10 +51,6 @@
     "storybook": "^7.6.4",
     "vite": "^5.0.7"
   },
-  "peerDependencies": {
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
-  },
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"

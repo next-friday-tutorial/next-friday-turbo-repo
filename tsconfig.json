@@ -12,10 +12,11 @@
     "strict": true,
     "isolatedModules": true,
     "noFallthroughCasesInSwitch": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true
-  }
+  },
+  "include": ["apps", "packages", "scripts", "**/*.config.ts"]
 }

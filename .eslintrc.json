@@ -1,34 +1,21 @@
 {
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "root": true,
   "env": {
     "es6": true,
-    "browser": true,
-    "node": true
+    "browser": true
   },
   "extends": [
     "airbnb",
     "airbnb-typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
+    "airbnb/hooks",
     "plugin:sonarjs/recommended",
     "prettier"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "react-hooks",
-    "jsx-a11y",
-    "import",
-    "prettier",
-    "sonarjs"
-  ],
+  "plugins": ["prettier", "sonarjs"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "tsconfig.json",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -37,7 +24,9 @@
   "rules": {
     "react/function-component-definition": [
       "error",
-      { "namedComponents": "arrow-function" }
+      {
+        "namedComponents": "arrow-function"
+      }
     ],
     "import/order": [
       "warn",
@@ -67,5 +56,26 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "packages/components/text/tests/text.test.tsx",
+        "packages/components/text/tests/text.test.ts"
+      ],
+      // "env": {
+      //   "jest": true
+      // },
+      // "extends": ["plugin:jest/recommended"],
+      // "plugins": ["jest"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    }
+  ]
 }

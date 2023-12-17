@@ -41,12 +41,14 @@
   },
   "dependencies": {
     "@next-friday-turbo-repo/text": "workspace:*",
-    "clean-package": "^2.2.0",
     "tsup": "^8.0.1"
   },
+  "devDependencies": {
+    "clean-package": "^2.2.0"
+  },
   "peerDependencies": {
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {

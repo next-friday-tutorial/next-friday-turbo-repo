@@ -10,6 +10,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "storybook-static/**"]
     },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
     "clean": {
       "cache": false
     },

@@ -3,11 +3,12 @@
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
+    "preserveWatchOutput": true,
     "noEmitOnError": true,
     "noImplicitReturns": true,
     "declarationMap": true,
     "baseUrl": "."
   },
-  "include": ["src/**/*", "stories/**/*", "tsup.config.ts"],
-  "exclude": ["node_modules", "dist", "src/**/*.test.ts", "src/**/*.test.tsx"]
+  "include": ["src/**/*", "stories/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
