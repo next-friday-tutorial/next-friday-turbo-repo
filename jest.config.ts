@@ -2,7 +2,6 @@ import type { Config } from 'jest';
 
 const config: Config = {
   testEnvironment: 'jsdom',
-  collectCoverageFrom: ['packages/**/*.{ts,tsx}'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   modulePathIgnorePatterns: [
     '<rootDir>/examples',
@@ -23,6 +22,18 @@ const config: Config = {
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',
   ],
+  collectCoverageFrom: ['packages/**/src/**/*.{ts,tsx}'],
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 50,
+      functions: 50,
+      lines: 50,
+      statements: 50,
+    },
+  },
 };
 
 export default config;
