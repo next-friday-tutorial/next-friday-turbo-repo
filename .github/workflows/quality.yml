@@ -55,7 +55,7 @@ jobs:
       - name: Install
         uses: ./.github/composite-actions/install
 
-      - name: Run tsc
+      - name: Run typecheck
         run: pnpm tsc
 
   prettier:
@@ -69,4 +69,4 @@ jobs:
         uses: ./.github/composite-actions/install
 
       - name: Run prettier
-        run: pnpm format:check
+        run: pnpm prettier:check

@@ -44,7 +44,8 @@
     "sort-package-json:workspace": "turbo sort-package-json:workspace",
     "test": "node -r ts-node/register node_modules/jest/bin/jest.js --verbose --config ./jest.config.ts --coverage",
     "tsc": "turbo tsc",
-    "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo"
+    "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo",
+    "prettier:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1",
