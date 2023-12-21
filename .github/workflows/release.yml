@@ -11,6 +11,12 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 jobs:
   release:
     name: Release
