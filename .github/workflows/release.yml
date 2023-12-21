@@ -18,39 +18,35 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAT }}
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install
+        uses: ./.github/common-actions/install
 
-      - name: Build the project
+      - name: Build
         run: pnpm build
 
-      - name: Run tests
+      - name: Tests
         run: pnpm test
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset:publish
+          publish: pnpm changeset:publis
           title: 'ci(changesets): :package: Version packages'
           commit: 'ci(changesets): Version packages'
-          setupGitUser: true
+          setupGitUser: false
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create @dev release
         if: steps.changesets.outputs.published != 'true'
         run: |
-          git config user.name "Joe Takara"  
-          git config user.email "your-email@example.com" # Replace with the appropriate email
           git checkout main
           pnpm version:dev
           pnpm release:dev
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
