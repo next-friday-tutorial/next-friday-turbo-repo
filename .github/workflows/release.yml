@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install
         uses: ./.github/composite-actions/install
@@ -35,7 +37,7 @@ jobs:
           publish: pnpm changeset:publish
           title: 'ci(changesets): :package: Version packages'
           commit: 'ci(changesets): Version packages'
-          setupGitUser: false
+          setupGitUser: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -44,6 +46,8 @@ jobs:
       - name: Create @dev release
         if: steps.changesets.outputs.published != 'true'
         run: |
+          git config user.name "Joe Takara"  
+          git config user.email "anuchit.boonsom@gmail.com"
           git checkout main
           pnpm version:dev
           pnpm release:dev

@@ -3,4 +3,4 @@
 '@next-friday-turbo-repo/react': patch
 ---
 
-Test pnpm changeset
+Test pnpm changeset 1
