@@ -19,15 +19,15 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
 
-      - name: Install
-        uses: ./.github/composite-actions/install
+      - name: Install dependencies
+        run: pnpm install
 
-      - name: Build
+      - name: Build the project
         run: pnpm build
 
-      - name: Tests
+      - name: Run tests
         run: pnpm test
 
       - name: Create Release Pull Request or Publish to NPM
@@ -41,16 +41,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
 
       - name: Create @dev release
         if: steps.changesets.outputs.published != 'true'
         run: |
           git config user.name "Joe Takara"  
-          git config user.email "anuchit.boonsom@gmail.com"
+          git config user.email "your-email@example.com" # Replace with the appropriate email
           git checkout main
           pnpm version:dev
           pnpm release:dev
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
