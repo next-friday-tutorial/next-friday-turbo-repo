@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.10
+
+### Patch Changes
+
+- d38cf6e: Test pnpm changeset 5
+
 ## 1.0.9
 
 ### Patch Changes
