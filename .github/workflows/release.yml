@@ -38,7 +38,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset:publis
+          publish: pnpm changeset:publish
           title: 'ci(changesets): :package: Version packages'
           commit: 'ci(changesets): Version packages'
           setupGitUser: false
