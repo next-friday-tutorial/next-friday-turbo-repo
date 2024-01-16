@@ -39,19 +39,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm changeset:publish
-          title: 'ci(changesets): :package: Version packages'
-          commit: 'ci(changesets): Version packages'
-          setupGitUser: false
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit Changes
-        if: steps.changesets.outputs.published == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --staged --quiet || git commit -m "ci(changesets): Version packages"
-          git push
