@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.0.0
+
+### Major Changes
+
+- xxx
+
 ## 5.0.0
 
 ### Major Changes
