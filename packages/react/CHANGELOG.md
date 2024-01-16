@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.11
+
+### Patch Changes
+
+- 0b46a0b: xxx
+- Updated dependencies [0b46a0b]
+  - @next-friday-turbo-repo/text@1.0.11
+
 ## 1.0.10
 
 ### Patch Changes

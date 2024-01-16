@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.11
+
+### Patch Changes
+
+- 0b46a0b: xxx
+
 ## 1.0.10
 
 ### Patch Changes
