@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.10
+
+### Patch Changes
+
+- b64b259: test patch 11
+
 ## 1.0.9
 
 ### Patch Changes
