@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0
+
+### Major Changes
+
+- xxx
+
+### Patch Changes
+
+- Updated dependencies
+  - @next-friday-turbo-repo/text@2.0.0
+
 ## 1.0.11
 
 ### Patch Changes
